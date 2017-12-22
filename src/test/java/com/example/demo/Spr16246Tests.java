@@ -74,7 +74,7 @@ public class Spr16246Tests {
 	}
 
 	private Flux<ByteBuf> getBody_ThisDoesNotWork(Resource resource) {
-		return DataBufferUtils.read(resource, new DefaultDataBufferFactory(), 4096)
+		return DataBufferUtils.read(resource, new DefaultDataBufferFactory(), 1024)
 					.map(NettyDataBufferFactory::toByteBuf);
 	}
 
